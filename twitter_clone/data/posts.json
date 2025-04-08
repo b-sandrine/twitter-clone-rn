@@ -1,197 +1,196 @@
 [
-    {
-      "id": "1",
-      "user": {
-        "name": "Sandrine",
-        "handle": "@sandrinetweets",
-        "avatar": "https://i.pravatar.cc/150?img=1"
-      },
-      "content": "Just started building a Twitter clone in React Native! 🚀 #devlife",
-      "timestamp": "2h",
-      "likes": 34,
-      "retweets": 5,
-      "media": [
-        "https://source.unsplash.com/random/600x400?sig=101"
-      ],
-      "comments": [
+  {
+    "id": "1",
+    "user": {
+      "name": "Sandrine",
+      "handle": "@sandrinetweets",
+      "avatar": "https://i.pravatar.cc/150?img=1"
+    },
+    "content": "Just started building a Twitter clone in React Native! 🚀 #devlife",
+    "timestamp": "2h",
+    "likes": 34,
+    "retweets": 5,
+    "media": [
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
+    ],
+    "comments": [
+      {
+          "name": "Mia W.",
+          "handle": "@miascribbles",
+          "avatar": "https://i.pravatar.cc/150?img=3",
+          "text": "That’s awesome! Looking forward to updates 👏",
+          "timestamp": "1h"
+        },
         {
-            "name": "Mia W.",
-            "handle": "@miascribbles",
-            "avatar": "https://i.pravatar.cc/150?img=3",
-            "text": "That’s awesome! Looking forward to updates 👏",
-            "timestamp": "1h"
-          },
-          {
-            "name": "Jason Lee",
-            "handle": "@jasonlee",
-            "avatar": "https://i.pravatar.cc/150?img=6",
-            "text": "Been there! Enjoy the ride 😎",
-            "timestamp": "58m"
-          }
-      ]
+          "name": "Jason Lee",
+          "handle": "@jasonlee",
+          "avatar": "https://i.pravatar.cc/150?img=6",
+          "text": "Been there! Enjoy the ride 😎",
+          "timestamp": "58m"
+        }
+    ]
+  },
+  {
+    "id": "2",
+    "user": {
+      "name": "Tech Guy",
+      "handle": "@techguy",
+      "avatar": "https://i.pravatar.cc/150?img=2"
     },
-    {
-      "id": "2",
-      "user": {
-        "name": "Tech Guy",
-        "handle": "@techguy",
-        "avatar": "https://i.pravatar.cc/150?img=2"
-      },
-      "content": "React Native or Flutter? Still can't decide 😅",
-      "timestamp": "3h",
-      "likes": 56,
-      "retweets": 10,
-      "media": [],
-      "comments": [
-        {
-            "name": "Fatima S.",
-            "handle": "@fatimacodes",
-            "avatar": "https://i.pravatar.cc/150?img=11",
-            "text": "Totally agree! Expo makes everything smoother.",
-            "timestamp": "2h"
-          }
-      ]
+    "content": "React Native or Flutter? Still can't decide 😅",
+    "timestamp": "3h",
+    "likes": 56,
+    "retweets": 10,
+    "media": [],
+    "comments": [
+      {
+          "name": "Fatima S.",
+          "handle": "@fatimacodes",
+          "avatar": "https://i.pravatar.cc/150?img=11",
+          "text": "Totally agree! Expo makes everything smoother.",
+          "timestamp": "2h"
+        }
+    ]
+  },
+  {
+    "id": "3",
+    "user": {
+      "name": "Lina Code",
+      "handle": "@linacodes",
+      "avatar": "https://i.pravatar.cc/150?img=3"
     },
-    {
-      "id": "3",
-      "user": {
-        "name": "Lina Code",
-        "handle": "@linacodes",
-        "avatar": "https://i.pravatar.cc/150?img=3"
-      },
-      "content": "My new dev setup 💻✨",
-      "timestamp": "5h",
-      "likes": 102,
-      "retweets": 14,
-      "media": [
-        "https://source.unsplash.com/random/600x400?sig=103",
-        "https://source.unsplash.com/random/600x400?sig=104"
-      ],
-      "comments": [
-        {
-            "name": "Chris",
-            "handle": "@chris_dev",
-            "avatar": "https://i.pravatar.cc/150?img=14",
-            "text": "Every. Single. Time. 😅",
-            "timestamp": "4h"
-          }
-      ]
+    "content": "My new dev setup 💻✨",
+    "timestamp": "5h",
+    "likes": 102,
+    "retweets": 14,
+    "media": [
+      "https://images.unsplash.com/photo-1518806118471-f28b20a1d79d",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+    ],
+    "comments": [
+      {
+          "name": "Chris",
+          "handle": "@chris_dev",
+          "avatar": "https://i.pravatar.cc/150?img=14",
+          "text": "Every. Single. Time. 😅",
+          "timestamp": "4h"
+        }
+    ]
+  },
+  {
+    "id": "4",
+    "user": {
+      "name": "Ken Dev",
+      "handle": "@ken_dev",
+      "avatar": "https://i.pravatar.cc/150?img=4"
     },
-    {
-      "id": "4",
-      "user": {
-        "name": "Ken Dev",
-        "handle": "@ken_dev",
-        "avatar": "https://i.pravatar.cc/150?img=4"
-      },
-      "content": "Dark mode supremacy. 😎",
-      "timestamp": "6h",
-      "likes": 80,
-      "retweets": 13,
-      "media": [
-        "https://source.unsplash.com/random/600x400?sig=105"
-      ],
-      "comments": []
+    "content": "Dark mode supremacy. 😎",
+    "timestamp": "6h",
+    "likes": 80,
+    "retweets": 13,
+    "media": [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    ],
+    "comments": []
+  },
+  {
+    "id": "5",
+    "user": {
+      "name": "Mira UX",
+      "handle": "@mira_ux",
+      "avatar": "https://i.pravatar.cc/150?img=5"
     },
-    {
-      "id": "5",
-      "user": {
-        "name": "Mira UX",
-        "handle": "@mira_ux",
-        "avatar": "https://i.pravatar.cc/150?img=5"
-      },
-      "content": "Trying to make this button feel more tappable 🔘",
-      "timestamp": "7h",
-      "likes": 41,
-      "retweets": 3,
-      "media": [],
-      "comments": []
+    "content": "Trying to make this button feel more tappable 🔘",
+    "timestamp": "7h",
+    "likes": 41,
+    "retweets": 3,
+    "media": [],
+    "comments": []
+  },
+  {
+    "id": "6",
+    "user": {
+      "name": "Jake Designer",
+      "handle": "@jakeux",
+      "avatar": "https://i.pravatar.cc/150?img=6"
     },
-    {
-      "id": "6",
-      "user": {
-        "name": "Jake Designer",
-        "handle": "@jakeux",
-        "avatar": "https://i.pravatar.cc/150?img=6"
-      },
-      "content": "Here's my latest mobile UI experiment 🧪",
-      "timestamp": "9h",
-      "likes": 90,
-      "retweets": 22,
-      "media": [
-        "https://source.unsplash.com/random/600x400?sig=106"
-      ],
-      "comments": []
+    "content": "Here's my latest mobile UI experiment 🧪",
+    "timestamp": "9h",
+    "likes": 90,
+    "retweets": 22,
+    "media": [
+      "https://images.unsplash.com/photo-1557683316-973673baf926"
+    ],
+    "comments": []
+  },
+  {
+    "id": "7",
+    "user": {
+      "name": "CodeMonster",
+      "handle": "@codemonster",
+      "avatar": "https://i.pravatar.cc/150?img=7"
     },
-    {
-      "id": "7",
-      "user": {
-        "name": "CodeMonster",
-        "handle": "@codemonster",
-        "avatar": "https://i.pravatar.cc/150?img=7"
-      },
-      "content": "Bug fixed after 4 hours... it was a semicolon. 🫠",
-      "timestamp": "10h",
-      "likes": 220,
-      "retweets": 50,
-      "media": [],
-      "comments": [
-        {
-            "name": "Amina",
-            "handle": "@amina_uiux",
-            "avatar": "https://i.pravatar.cc/150?img=15",
-            "text": "Sounds interesting! I’ll DM you now.",
-            "timestamp": "40m"
-          }
-      ]
+    "content": "Bug fixed after 4 hours... it was a semicolon. 🫠",
+    "timestamp": "10h",
+    "likes": 220,
+    "retweets": 50,
+    "media": [],
+    "comments": [
+      {
+          "name": "Amina",
+          "handle": "@amina_uiux",
+          "avatar": "https://i.pravatar.cc/150?img=15",
+          "text": "Sounds interesting! I’ll DM you now.",
+          "timestamp": "40m"
+        }
+    ]
+  },
+  {
+    "id": "8",
+    "user": {
+      "name": "Ali QA",
+      "handle": "@ali_qa",
+      "avatar": "https://i.pravatar.cc/150?img=8"
     },
-    {
-      "id": "8",
-      "user": {
-        "name": "Ali QA",
-        "handle": "@ali_qa",
-        "avatar": "https://i.pravatar.cc/150?img=8"
-      },
-      "content": "Testing is just asking 'what if?' again and again 🧠",
-      "timestamp": "11h",
-      "likes": 58,
-      "retweets": 11,
-      "media": [
-        "https://source.unsplash.com/random/600x400?sig=107",
-        "https://source.unsplash.com/random/600x400?sig=108",
-        "https://source.unsplash.com/random/600x400?sig=109"
-      ],
-      "comments": []
+    "content": "Testing is just asking 'what if?' again and again 🧠",
+    "timestamp": "11h",
+    "likes": 58,
+    "retweets": 11,
+    "media": [
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
+      "https://images.unsplash.com/photo-1523475496153-3d6ccf9f9c7c",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+    ],
+    "comments": []
+  },
+  {
+    "id": "9",
+    "user": {
+      "name": "React Bot",
+      "handle": "@reactbot",
+      "avatar": "https://i.pravatar.cc/150?img=9"
     },
-    {
-      "id": "9",
-      "user": {
-        "name": "React Bot",
-        "handle": "@reactbot",
-        "avatar": "https://i.pravatar.cc/150?img=9"
-      },
-      "content": "Did you know you can memoize components with React.memo()? ⚛️",
-      "timestamp": "13h",
-      "likes": 77,
-      "retweets": 17,
-      "media": [],
-      "comments": []
+    "content": "Did you know you can memoize components with React.memo()? ⚛️",
+    "timestamp": "13h",
+    "likes": 77,
+    "retweets": 17,
+    "media": [],
+    "comments": []
+  },
+  {
+    "id": "10",
+    "user": {
+      "name": "Crypto Cat",
+      "handle": "@cryptocat",
+      "avatar": "https://i.pravatar.cc/150?img=10"
     },
-    {
-      "id": "10",
-      "user": {
-        "name": "Crypto Cat",
-        "handle": "@cryptocat",
-        "avatar": "https://i.pravatar.cc/150?img=10"
-      },
-      "content": "Building dApps with React Native now. Is this the future? 🧱",
-      "timestamp": "15h",
-      "likes": 88,
-      "retweets": 8,
-      "media": [
-        "https://source.unsplash.com/random/600x400?sig=110"
-      ],
-      "comments": []
-    }
-  ]
-  
+    "content": "Building dApps with React Native now. Is this the future? 🧱",
+    "timestamp": "15h",
+    "likes": 88,
+    "retweets": 8,
+    "media": [
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+    ],
+    "comments": []
+  }
+]
