@@ -15,7 +15,7 @@ interface Comment {
     timestamp: string;
 }
 
-interface Tweet {
+export interface Tweet {
     id: string;
     user: User;
     content: string;
@@ -29,7 +29,7 @@ type TweetCardProps = {
     tweet: Tweet;
 };
 
-export default function TweetCard({ tweet }: TweetCardProps) {
+export function TweetCard({ tweet }: TweetCardProps) {
     return (
         <View style={styles.card}>
             <Avatar uri={tweet.user.avatar} />
@@ -121,3 +121,4 @@ const styles = StyleSheet.create({
     commentHandle: { color: 'gray' },
     commentTimestamp: { color: 'gray' },
 });
+

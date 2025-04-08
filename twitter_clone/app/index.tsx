@@ -1,8 +1,27 @@
-import { Slot } from "expo-router";
+import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import TweetList from '../components/TweetLists';
+import { useRouter } from 'expo-router';
 
-export default function App() {
+export default function HomeScreen() {
+  const router = useRouter();
+
+  const handleTweetPress = (tweetId: string) => {
+    router.push({
+      pathname: "/tweet/[id]",
+      params: { id: tweetId },
+    });
+  };
+
   return (
-    <Slot />
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.header}>Twitter Clone</Text>
+      {/* Pass the navigation handler to the TweetList */}
+      <TweetList onTweetPress={handleTweetPress} />
+    </SafeAreaView>
   );
 }
-// This is the main entry point of the app. It uses Expo Router to handle navigation.
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#fff' },
+  header: { fontSize: 24, fontWeight: 'bold', padding: 16 },
+});

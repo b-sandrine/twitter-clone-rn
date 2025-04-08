@@ -1,6 +1,6 @@
 import { FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import tweets from '../data/posts.json';
-import TweetCard from './TweetCard';
+import { TweetCard } from './TweetCard';
 
 export default function TweetList({ onTweetPress }: { onTweetPress: (id: string) => void }) {
   return (
