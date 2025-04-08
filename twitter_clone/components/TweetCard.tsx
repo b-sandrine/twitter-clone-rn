@@ -103,10 +103,12 @@ const styles = StyleSheet.create({
         width: '100%', // Full width for a single image
         height: 200,
         borderRadius: 10,
+        marginTop: 8,
     },
     twoMedia: {
-        width: '25%', // Half width for two images
+        width: '50%', // Half width for two images
         height: 150,
+        marginTop: 8,
     },
     contentText: { marginTop: 4 },
     buttons: { flexDirection: 'row', justifyContent: 'space-around', marginTop: 8 },
