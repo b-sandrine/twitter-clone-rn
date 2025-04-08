@@ -9,6 +9,8 @@ function TweetDetailsScreen() {
     const id = useSearchParams().toString()
 
     const tweet = tweets.find((t: Tweet) => t.id === id)
+
+    console.log("Here is the tweet", tweet)
     if (!tweet) {
         return <Text>Tweet not found</Text>
     }

@@ -15,7 +15,6 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.header}>Twitter Clone</Text>
-      {/* Pass the navigation handler to the TweetList */}
       <TweetList onTweetPress={handleTweetPress} />
     </SafeAreaView>
   );

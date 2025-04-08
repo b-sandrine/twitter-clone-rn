@@ -1,8 +1,8 @@
-import { Slot } from "expo-router";
+import { Stack } from "expo-router";
 
 export default function Layout() {
   return (
-    <Slot />
+    <Stack />
   );
 }
 // This is the main entry point of the app. It uses Expo Router to handle navigation.
