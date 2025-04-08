@@ -34,7 +34,7 @@ export default function TweetCard({ tweet }: TweetCardProps) {
         <View style={styles.card}>
             <Avatar uri={tweet.user.avatar} />
             <View style={styles.content}>
-                <Text style={styles.name}>{tweet.user.name} <Text style={styles.handle}>{tweet.user.handle}</Text></Text>
+                <Text style={styles.name}>{tweet.user.name} <Text style={styles.handle}>{tweet.user.handle}</Text> <Text style={styles.handle}> . {tweet.timestamp}</Text></Text>
                 <Text>{tweet.content}</Text>
 
                 {Array.isArray(tweet.media) && tweet.media.length > 0 && (
