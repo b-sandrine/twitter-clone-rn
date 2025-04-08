@@ -1,4 +1,19 @@
-// filepath: c:\Users\sanrd\OneDrive\Documents\projects\twitter-clone-rn\twitter_clone\app\index.tsx
-import HomeScreen from '../screens/HomeScreen';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack'
 
-export default HomeScreen;
+import HomeScreen from '../screens/HomeScreen';
+import TweetDetailsScreen from '../screens/TweetDetailsScreen';
+
+const Stack = createStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="TweetDetails" component={TweetDetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
