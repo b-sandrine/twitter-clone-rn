@@ -36,25 +36,21 @@ export default function TweetCard({ tweet }: TweetCardProps) {
             <View style={styles.content}>
                 <Text style={styles.name}>{tweet.user.name} <Text style={styles.handle}>{tweet.user.handle}</Text> <Text style={styles.handle}> . {tweet.timestamp}</Text></Text>
                 <Text>{tweet.content}</Text>
-                
-                {/* media section  */}
-                
+
+                {/* Media Section */}
                 {Array.isArray(tweet.media) && tweet.media.length > 0 && (
-                    <FlatList
-                        data={tweet.media}
-                        renderItem={({ item, index }) => {
-                            console.log(`Image url: ${item} and its index: ${index}`);
-                            
-                            return <Image source={{ uri: item }} 
-                            style={styles.media}
-                            onError={(error) => console.log('Image Load Error:', error.nativeEvent.error)} />
-                        }}
-                        keyExtractor={(item, index) => index.toString()}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                        style={{ marginTop: 8 }}
-                        contentContainerStyle={{ paddingBottom: 8 }}
-                        />
+                    <View style={styles.mediaContainer}>
+                        {tweet.media.map((item, index) => (
+                            <Image
+                                key={index}
+                                source={{ uri: item }}
+                                style={[
+                                    (tweet.media ?? []).length === 1 ? styles.singleMedia : styles.twoMedia,
+                                ]}
+                                onError={(error) => console.log('Image Load Error:', error.nativeEvent.error)}
+                            />
+                        ))}
+                    </View>
                 )}
 
                 {/* Buttons  */}
@@ -99,7 +95,19 @@ const styles = StyleSheet.create({
     content: { marginLeft: 10, flex: 1 },
     name: { fontWeight: 'bold' },
     handle: { color: 'gray' },
-    media: { marginTop: 8, width: '50%', height: 200, borderRadius: 10 },
+    mediaContainer: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+    },
+    singleMedia: {
+        width: '100%', // Full width for a single image
+        height: 200,
+        borderRadius: 10,
+    },
+    twoMedia: {
+        width: '25%', // Half width for two images
+        height: 150,
+    },
     contentText: { marginTop: 4 },
     buttons: { flexDirection: 'row', justifyContent: 'space-around', marginTop: 8 },
     button: { padding: 8 },
