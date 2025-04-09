@@ -1,0 +1,5 @@
+[
+    { "id": "1", "user": "John", "verified": true, "sentiment": "positive", "likes": 10, "text": "Great post!" },
+    { "id": "2", "user": "Jane", "verified": false, "sentiment": "neutral", "likes": 5, "text": "Interesting perspective." },
+    { "id": "3", "user": "Doe", "verified": true, "sentiment": "negative", "likes": 2, "text": "I disagree with this." }
+  ]

@@ -1,0 +1,12 @@
+[
+    {
+      "id": "1",
+      "content": "This is a sample post about React Native development.",
+      "commentsCount": 120,
+      "sentiment": {
+        "positive": 60,
+        "neutral": 30,
+        "negative": 10
+      }
+    }
+  ]
