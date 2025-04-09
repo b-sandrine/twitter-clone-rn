@@ -8,8 +8,6 @@ import tweets from '../../data/posts.json'
 function TweetDetailsScreen() {
     const { id } = useLocalSearchParams()
 
-    console.log("Tweet id", id)
-
     const tweet = tweets.find((t: Tweet) => t.id === id)
 
     console.log("Here is the tweet", tweet)
