@@ -49,12 +49,10 @@ export default function PostCard({ post }: { post: any }) {
                 {post.sentiment && <SentimentBar sentiment={post.sentiment} />}
 
                 {/*Comment section */}
-                <Text style={styles.commentsCount}>Comments: {post.commentsCount}</Text>
                 <TouchableOpacity
-                    style={styles.button}
                     onPress={() => router.push('/comments')}
                 >
-                    <Text style={styles.buttonText}>Show Comments</Text>
+                    <Text style={styles.commentsCount}>View all {post.commentsCount} comments</Text>
                 </TouchableOpacity>
             </ScrollView>
         </View>
@@ -129,6 +127,5 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     commentsCount: { fontSize: 16, marginVertical: 8 },
-    button: { backgroundColor: '#007BFF', padding: 12, borderRadius: 8 },
     buttonText: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
 });

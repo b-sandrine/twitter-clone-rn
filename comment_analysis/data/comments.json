@@ -1,24 +1,33 @@
 [
     {
         "id": "1",
-        "user": "John",
-        "verified": true,
+        "user": {
+            "user": "John",
+            "avatar": "https://i.pravatar.cc/150?img=1",
+            "verified": true
+        },
         "sentiment": "positive",
         "likes": 10,
         "text": "Great post!"
     },
     {
         "id": "2",
-        "user": "Jane",
-        "verified": false,
+        "user": {
+            "name": "Jane",
+            "avatar": "https://i.pravatar.cc/150?img=1",
+            "verified": false
+        },
         "sentiment": "neutral",
         "likes": 5,
         "text": "Interesting perspective."
     },
     {
         "id": "3",
-        "user": "Doe",
-        "verified": true,
+        "user": {
+            "name": "Doe",
+            "avatar": "https://i.pravatar.cc/150?img=1",
+            "verified": true
+        },
         "sentiment": "negative",
         "likes": 2,
         "text": "I disagree with this."

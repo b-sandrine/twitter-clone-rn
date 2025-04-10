@@ -1,11 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+import Avatar from './Avatar';
+
+
 export default function CommentCard({ comment, isAnalyticView }: { comment: any; isAnalyticView: boolean }) {
   return (
     <View style={styles.card}>
       <Text style={styles.user}>
-        {comment.user} {comment.verified && '✔️'}
+        <Avatar uri={comment.user.avatar}></Avatar>
+        {comment.user.name} {comment.user.verified && '✔️'}
       </Text>
       <Text>{comment.text}</Text>
       {isAnalyticView && <Text>Sentiment: {comment.sentiment}</Text>}
