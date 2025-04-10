@@ -12,9 +12,9 @@
         "timestamp": 5,
         "commentsCount": 120,
         "sentiment": {
-            "positive": 60,
+            "positive": 10,
             "neutral": 30,
-            "negative": 10
+            "negative": 60
         }
     }
 ]

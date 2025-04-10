@@ -6,11 +6,11 @@ export default function SentimentBar({ sentiment }: { sentiment: { positive: num
     <View style={styles.container}>
       {/* Sentiment Bar */}
       <View style={styles.barContainer}>
-        {/* Positive Section */}
-        <View style={[styles.bar, styles.positiveBar, { flex: sentiment.positive }]}>
-          {sentiment.positive > 0 && (
-            <Text style={[styles.label, styles.positiveLabel]}>
-              {sentiment.positive}% ✅
+        {/* Negative Section */}
+        <View style={[styles.bar, styles.negativeBar, { flex: sentiment.negative }]}>
+          {sentiment.negative > 0 && (
+            <Text style={[styles.label, styles.negativeLabel]}>
+              {sentiment.negative}% Skeptical
             </Text>
           )}
         </View>
@@ -19,16 +19,16 @@ export default function SentimentBar({ sentiment }: { sentiment: { positive: num
         <View style={[styles.bar, styles.neutralBar, { flex: sentiment.neutral }]}>
           {sentiment.neutral > 0 && (
             <Text style={[styles.label, styles.neutralLabel]}>
-              {sentiment.neutral}% ⚪
+              {sentiment.neutral}% Neatral
             </Text>
           )}
         </View>
 
-        {/* Negative Section */}
-        <View style={[styles.bar, styles.negativeBar, { flex: sentiment.negative }]}>
-          {sentiment.negative > 0 && (
-            <Text style={[styles.label, styles.negativeLabel]}>
-              {sentiment.negative}% ❌
+        {/* Positive Section */}
+        <View style={[styles.bar, styles.positiveBar, { flex: sentiment.positive }]}>
+          {sentiment.positive > 0 && (
+            <Text style={[styles.label, styles.positiveLabel]}>
+              {sentiment.positive}% Agree
             </Text>
           )}
         </View>
