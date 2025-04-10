@@ -14,7 +14,6 @@ export default function PostScreen() {
   return (
     <View style={styles.container}>
       <PostCard post={post} />
-      <SentimentBar sentiment={post.sentiment} />
       <Text style={styles.commentsCount}>Comments: {post.commentsCount}</Text>
       <TouchableOpacity
         style={styles.button}

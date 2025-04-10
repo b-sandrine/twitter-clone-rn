@@ -4,21 +4,76 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function SentimentBar({ sentiment }: { sentiment: { positive: number; neutral: number; negative: number } }) {
   return (
     <View style={styles.container}>
-      <View style={[styles.bar, { backgroundColor: 'green', flex: sentiment.positive }]} />
-      <View style={[styles.bar, { backgroundColor: 'gray', flex: sentiment.neutral }]} />
-      <View style={[styles.bar, { backgroundColor: 'red', flex: sentiment.negative }]} />
-      <View style={styles.labels}>
-        <Text style={styles.label}>Positive: {sentiment.positive}%</Text>
-        <Text style={styles.label}>Neutral: {sentiment.neutral}%</Text>
-        <Text style={styles.label}>Negative: {sentiment.negative}%</Text>
+      {/* Sentiment Bar */}
+      <View style={styles.barContainer}>
+        {/* Positive Section */}
+        <View style={[styles.bar, styles.positiveBar, { flex: sentiment.positive }]}>
+          {sentiment.positive > 0 && (
+            <Text style={[styles.label, styles.positiveLabel]}>
+              {sentiment.positive}% ✅
+            </Text>
+          )}
+        </View>
+
+        {/* Neutral Section */}
+        <View style={[styles.bar, styles.neutralBar, { flex: sentiment.neutral }]}>
+          {sentiment.neutral > 0 && (
+            <Text style={[styles.label, styles.neutralLabel]}>
+              {sentiment.neutral}% ⚪
+            </Text>
+          )}
+        </View>
+
+        {/* Negative Section */}
+        <View style={[styles.bar, styles.negativeBar, { flex: sentiment.negative }]}>
+          {sentiment.negative > 0 && (
+            <Text style={[styles.label, styles.negativeLabel]}>
+              {sentiment.negative}% ❌
+            </Text>
+          )}
+        </View>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { marginVertical: 16 },
-  bar: { height: 10 },
-  labels: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 8 },
-  label: { fontSize: 12 },
+  container: {
+    marginVertical: 16,
+  },
+  barContainer: {
+    flexDirection: 'row',
+    height: 40, // Increased height for better visibility
+    borderRadius: 20, // Rounded edges
+    overflow: 'hidden',
+    backgroundColor: '#ddd', // Background color for empty sections
+  },
+  bar: {
+    height: '100%',
+    justifyContent: 'center', // Center the label vertically
+    alignItems: 'center', // Center the label horizontally
+  },
+  positiveBar: {
+    backgroundColor: 'green',
+  },
+  neutralBar: {
+    backgroundColor: 'yellow',
+  },
+  negativeBar: {
+    backgroundColor: 'red',
+  },
+  label: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#fff', 
+  },
+  positiveLabel: {
+    color: 'white', 
+  },
+  neutralLabel: {
+    color: 'black', 
+  },
+  negativeLabel: {
+    color: 'white', 
+  },
 });
