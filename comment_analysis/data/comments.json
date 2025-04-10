@@ -2,7 +2,7 @@
     {
         "id": "1",
         "user": {
-            "user": "John",
+            "name": "John",
             "avatar": "https://i.pravatar.cc/150?img=1",
             "verified": true
         },
