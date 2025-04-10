@@ -1,12 +1,19 @@
 [
     {
-      "id": "1",
-      "content": "This is a sample post about React Native development.",
-      "commentsCount": 120,
-      "sentiment": {
-        "positive": 60,
-        "neutral": 30,
-        "negative": 10
-      }
+        "id": "1",
+        "user": {
+            "name": "Sandrine",
+            "handle": "@sandrinetweets",
+            "avatar": "https://i.pravatar.cc/150?img=1"
+        },
+        "title": "INCOME-DRIVEN STUDENT LOAN REPAYMENT PLANS HAS BEEN SUSPENDED",
+        "media": "https://plus.unsplash.com/premium_photo-1677678989485-c06237b623f3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "content": "This is a sample post about React Native development.",
+        "commentsCount": 120,
+        "sentiment": {
+            "positive": 60,
+            "neutral": 30,
+            "negative": 10
+        }
     }
-  ]
+]

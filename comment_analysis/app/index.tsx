@@ -4,6 +4,8 @@ import SentimentBar from '../components/SentimentBar';
 import posts from '../data/posts.json';
 import { useRouter } from 'expo-router';
 
+import PostCard from '@/components/PostCard';
+
 const post = posts[0]; // Assume the first post is displayed
 
 export default function PostScreen() {
@@ -11,7 +13,7 @@ export default function PostScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.postContent}>{post.content}</Text>
+      <PostCard post={post} />
       <SentimentBar sentiment={post.sentiment} />
       <Text style={styles.commentsCount}>Comments: {post.commentsCount}</Text>
       <TouchableOpacity
