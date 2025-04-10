@@ -4,32 +4,50 @@
         "user": {
             "name": "John",
             "avatar": "https://i.pravatar.cc/150?img=1",
-            "verified": true
+            "verified": true,
+            "profile": {
+                "bio": "Just a regular user",
+                "location": "USA",
+                "website": "https://example.com"
+            }
         },
         "sentiment": "positive",
         "likes": 10,
-        "text": "Great post!"
+        "text": "Great post!",
+        "replies": 32
     },
     {
         "id": "2",
         "user": {
             "name": "Jane",
             "avatar": "https://i.pravatar.cc/150?img=1",
-            "verified": false
+            "verified": false,
+            "profile": {
+                "bio": "Just a regular user",
+                "location": "USA",
+                "website": "https://example.com"
+            }
         },
         "sentiment": "neutral",
         "likes": 5,
-        "text": "Interesting perspective."
+        "text": "Interesting perspective.",
+        "replies": 5
     },
     {
         "id": "3",
         "user": {
             "name": "Doe",
             "avatar": "https://i.pravatar.cc/150?img=1",
-            "verified": true
+            "verified": true,
+            "profile": {
+                "bio": "Just a regular user",
+                "location": "USA",
+                "website": "https://example.com"
+            }
         },
         "sentiment": "negative",
         "likes": 2,
-        "text": "I disagree with this."
+        "text": "I disagree with this.",
+        "replies": 10
     }
 ]
