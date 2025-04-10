@@ -14,13 +14,6 @@ export default function PostScreen() {
   return (
     <View style={styles.container}>
       <PostCard post={post} />
-      <Text style={styles.commentsCount}>Comments: {post.commentsCount}</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.push('/comments')}
-      >
-        <Text style={styles.buttonText}>Show Comments</Text>
-      </TouchableOpacity>
     </View>
   );
 }
@@ -28,7 +21,5 @@ export default function PostScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#fff' },
   postContent: { fontSize: 18, marginBottom: 16 },
-  commentsCount: { fontSize: 16, marginVertical: 8 },
-  button: { backgroundColor: '#007BFF', padding: 12, borderRadius: 8 },
-  buttonText: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
+  
 });

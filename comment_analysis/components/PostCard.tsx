@@ -1,72 +1,62 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import Avatar from './Avatar';
 import SentimentBar from './SentimentBar';
+import { useRouter } from 'expo-router';
 
-interface User {
-    name: string;
-    handle: string;
-    avatar: string;
-}
+export default function PostCard({ post }: { post: any }) {
 
-interface Sentiment {
-    positive: number;
-    negative: number;
-    neutral: number;
-}
-
-export interface Post {
-    id: string;
-    user: User;
-    title: string;
-    content: string;
-    media: string;
-    commentCount?: number;
-    sentiment?: Sentiment;
-}
-
-type PostCardProps = {
-    post: Post;
-};
-
-export default function PostCard({ post }: PostCardProps) {
+    const router = useRouter();
     return (
         <View style={styles.card}>
-            {/* User Info */}
-            <View style={styles.userContainer}>
-                <Avatar uri={post.user.avatar} />
-                <View style={styles.userInfo}>
-                    <Text style={styles.userName}>{post.user.name}</Text>
-                    <Text style={styles.userHandle}>{post.user.handle}</Text>
+            <ScrollView contentContainerStyle={styles.scrollContainer}>
+                {/* User Info */}
+                <View style={styles.userContainer}>
+                    <Avatar uri={post.user.avatar} />
+                    <View style={styles.userInfo}>
+                        <Text style={styles.userName}>{post.user.name}</Text>
+                    </View>
                 </View>
-            </View>
 
-            {/* Post Media */}
-            {post.media && (
-                <Image source={{ uri: post.media }} style={styles.postImage} />
-            )}
+                {/* Post Media */}
+                {post.media && (
+                    <Image source={{ uri: post.media }} style={styles.postImage} />
+                )}
 
-            {/* Post Content */}
-            <View style={styles.contentContainer}>
-                <Text style={styles.title}>{post.title}</Text>
-                <Text style={styles.content}>{post.content}</Text>
-            </View>
+                {/* Post Content */}
+                <View style={styles.contentContainer}>
+                    <Text style={styles.title}>{post.title}</Text>
+                    
+                    {/* Actions */}
+                    <View style={styles.actionsContainer}>
+                        <TouchableOpacity style={styles.actionButton}>
+                            <Text>❤️ Like</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.actionButton}>
+                            <Text>💬 Comment</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.actionButton}>
+                            <Text>🔁 Share</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <Text style={styles.content}><Text style={styles.userName}>{post.user.name}</Text> {post.content}</Text>
 
-            {/* Sentiment Bar */}
-            {post.sentiment && <SentimentBar sentiment={post.sentiment} />}
+                    <Text style={styles.timestamp}>{post.timestamp} hours ago</Text>
+                </View>
 
-            {/* Actions */}
-            <View style={styles.actionsContainer}>
-                <TouchableOpacity style={styles.actionButton}>
-                    <Text>❤️ Like</Text>
+                {/* Sentiment Bar */}
+                <Text style={styles.sentimentTitle}>Community Consensus Score Bar</Text>
+                {post.sentiment && <SentimentBar sentiment={post.sentiment} />}
+
+                {/*Comment section */}
+                <Text style={styles.commentsCount}>Comments: {post.commentsCount}</Text>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={() => router.push('/comments')}
+                >
+                    <Text style={styles.buttonText}>Show Comments</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.actionButton}>
-                    <Text>💬 Comment</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.actionButton}>
-                    <Text>🔁 Share</Text>
-                </TouchableOpacity>
-            </View>
+            </ScrollView>
         </View>
     );
 }
@@ -77,13 +67,16 @@ const styles = StyleSheet.create({
         marginBottom: 16,
         borderRadius: 8,
         overflow: 'hidden',
-        borderWidth: 1,
-        borderColor: '#ddd',
+        height: 'auto',
+        maxHeight: 800,
+    },
+    scrollContainer: {
+        padding: 10,
     },
     userContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        padding: 10,
+        marginBottom: 10,
     },
     userInfo: {
         marginLeft: 10,
@@ -100,9 +93,10 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 300,
         resizeMode: 'cover',
+        marginBottom: 10,
     },
     contentContainer: {
-        padding: 10,
+        marginBottom: 10,
     },
     title: {
         fontWeight: 'bold',
@@ -112,15 +106,29 @@ const styles = StyleSheet.create({
     content: {
         fontSize: 14,
         color: '#333',
+        lineHeight: 20,
+    },
+    timestamp: {
+        marginTop: 8,
+        color: 'gray',
+        fontStyle: 'italic',
+    },
+    sentimentTitle: {
+        fontWeight: 'bold',
+        fontSize: 14,
+        marginBottom: 8,
     },
     actionsContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
         paddingVertical: 10,
-        borderTopWidth: 1,
-        borderTopColor: '#ddd',
+        marginTop: 10,
+        marginBottom: 10,
     },
     actionButton: {
         alignItems: 'center',
     },
+    commentsCount: { fontSize: 16, marginVertical: 8 },
+    button: { backgroundColor: '#007BFF', padding: 12, borderRadius: 8 },
+    buttonText: { color: '#fff', textAlign: 'center', fontWeight: 'bold' },
 });
