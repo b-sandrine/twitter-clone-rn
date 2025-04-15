@@ -45,7 +45,7 @@
                 "website": "https://example.com"
             }
         },
-        "sentiment": "negative",
+        "sentiment": "skeptical",
         "likes": 2,
         "text": "I disagree with this.",
         "replies": 10

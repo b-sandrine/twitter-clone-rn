@@ -9,7 +9,6 @@ import PostCard from '@/components/PostCard';
 const post = posts[0]; // Assume the first post is displayed
 
 export default function PostScreen() {
-  const router = useRouter();
 
   return (
     <View style={styles.container}>

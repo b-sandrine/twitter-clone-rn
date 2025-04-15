@@ -55,12 +55,15 @@ const styles = StyleSheet.create({
   },
   positiveBar: {
     backgroundColor: 'green',
+    width: '30%'
   },
   neutralBar: {
     backgroundColor: 'yellow',
+    width: '30%'
   },
   negativeBar: {
     backgroundColor: 'red',
+    width: '30%'
   },
   label: {
     fontSize: 14,

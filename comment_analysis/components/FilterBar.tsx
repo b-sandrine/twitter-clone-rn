@@ -1,52 +1,53 @@
-import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import RNPickerSelect from 'react-native-picker-select';
 
-type FilterBarProps = {
-  filter: string; // Current filter value
-  setFilter: (filter: string) => void; // Function to update the filter
-};
+interface FilterBarProps {
+  options: string;
+  setOptions: (options: string) => void;
+}
 
-export default function FilterBar({ filter, setFilter }: FilterBarProps) {
-  const filters = ['all', 'positive', 'neutral', 'negative'];
+export default function FilterBar({ options, setOptions }: FilterBarProps) {
+  const [selectedValue, setSelectedValue] = useState('positive');
 
   return (
     <View style={styles.container}>
-      {filters.map((item) => (
-        <TouchableOpacity
-          key={item}
-          style={[styles.button, filter === item && styles.activeButton]}
-          onPress={() => setFilter(item)}
-        >
-          <Text style={[styles.buttonText, filter === item && styles.activeButtonText]}>
-            {item.charAt(0).toUpperCase() + item.slice(1)}
-          </Text>
-        </TouchableOpacity>
-      ))}
+      <RNPickerSelect
+        value={selectedValue}
+        onValueChange={(value) => {
+          setSelectedValue(value);
+          setOptions(value);
+        }}
+        items={[
+          { label: 'Most Credible (Experts & Verified)', value: 'verified' },
+          { label: 'Most Engaged (More replies)', value: 'moreReplies' },
+          { label: 'Positive Comments', value: 'positive' },
+        ]}
+        style={{
+          inputIOS: styles.dropdown,
+          inputAndroid: styles.dropdown,
+        }}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginBottom: 16,
-  },
-  button: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-end', // Align the dropdown to the right
+    padding: 16,
+    width: '40%', // Restrict the container width to 40% of the screen
+    borderWidth: 1, // Add border to the container
+    borderColor: '#ccc',
     borderRadius: 8,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#fff', // Optional: Add a background color to the container
   },
-  activeButton: {
-    backgroundColor: '#007BFF',
-  },
-  buttonText: {
-    fontSize: 14,
-    color: '#000',
-  },
-  activeButtonText: {
-    color: '#fff',
-    fontWeight: 'bold',
+  dropdown: {
+    height: 50,
+    paddingHorizontal: 8,
+    justifyContent: 'center',
+    backgroundColor: 'transparent', // Ensure the dropdown has no background
   },
 });
