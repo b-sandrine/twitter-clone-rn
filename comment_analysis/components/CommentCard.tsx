@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 import Avatar from './Avatar';
 
+import Icon from 'react-native-vector-icons/FontAwesome5'; // Import FontAwesome5 for icons
+
 export default function CommentCard({ comment, isAnalyticView }: { comment: any; isAnalyticView: boolean }) {
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -51,10 +53,39 @@ export default function CommentCard({ comment, isAnalyticView }: { comment: any;
       {modalVisible && (
         <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
           <View style={styles.modalContent}>
-            <Avatar uri={comment.user.avatar} />
-            <Text style={styles.modalUserName}>{comment.user.name}</Text>
-            <Text style={styles.modalUserHandle}>{comment.user.handle}</Text>
-            <Text style={styles.modalUserBio}>Bio: {comment.user.profile.bio}</Text>
+            <View style={styles.flexContainer}>
+              <Avatar uri={comment.user.avatar} />
+              <Text style={styles.modalUserName}>{comment.user.name}</Text>
+              {comment.user.verified && (
+                <Image
+                  source={require('../assets/images/verified.png')} // Path to the verified badge image
+                  style={styles.verifiedBadge}
+                />
+              )}
+            </View>
+            <View style={styles.container}>
+              <Icon name="pin" size={24} color="red" style={styles.modalUserHandle}/>
+              <Text style={styles.modalUserName}>Engagement: {comment.user.profile.engagement}</Text>
+            </View>
+            <View style={styles.container}>
+              <Icon name="thumbs-up" size={16} color="#007BFF"  style={styles.modalUserHandle}/>
+              <Text style={styles.modalUserName}>Topic insights:
+                <View style={styles.container}>
+                  -
+                  <Icon name="sack-dollar" size={40} color="#007BFF"  />
+                  <Text style={styles.modalUserName}>  {comment.user.profile.bio} </Text>
+                </View>
+              </Text>
+
+            </View>
+            <View style={styles.container}>
+              <Icon name="thumbs-up" size={16} color="#007BFF"  style={styles.modalUserHandle}/>
+              <Text style={styles.modalUserName}>Misinformation:
+                <View style={styles.container}>
+                  <Text style={styles.modalUserName}>- {comment.user.profile.flags} flags | Fact-Checking contribution</Text>
+                </View>
+              </Text>
+            </View>
           </View>
         </TouchableWithoutFeedback>
       )}
@@ -63,6 +94,12 @@ export default function CommentCard({ comment, isAnalyticView }: { comment: any;
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 8,
+    zIndex: 1000
+  },
   card: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -92,6 +129,7 @@ const styles = StyleSheet.create({
     width: 16,
     height: 16,
     marginLeft: 4,
+    marginTop: 8,
   },
   commentText: {
     fontSize: 14,
@@ -135,11 +173,12 @@ const styles = StyleSheet.create({
   modalContent: {
     position: 'absolute',
     top: 50,
-    left: '50%',
-    width: '50%',
+    left: '25%',
+    width: '80%',
     borderWidth: 1,
     borderColor: '#eee',
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
+    color: 'white',
     transform: [{ translateX: -25 }], // Center the modal horizontally
     borderRadius: 8,
     padding: 16,
@@ -155,17 +194,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     marginTop: 8,
+    color: 'white',
+    marginLeft: 10,
+    zIndex: 1000
   },
   modalUserHandle: {
-    fontSize: 14,
-    color: 'gray',
-    marginBottom: 8,
-  },
-  modalUserBio: {
-    fontSize: 14,
-    color: '#333',
-    textAlign: 'center',
-    marginBottom: 16,
+    marginTop: 8,
   },
   closeButton: {
     backgroundColor: '#007BFF',
@@ -177,4 +211,10 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
   },
+  flexContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 8,
+  }
 });

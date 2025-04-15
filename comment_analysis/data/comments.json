@@ -6,7 +6,9 @@
             "avatar": "https://i.pravatar.cc/150?img=1",
             "verified": true,
             "profile": {
-                "bio": "Just a regular user",
+                "bio": "Politics: Democratic supporter",
+                "engagement": "Frequent Commenter",
+                "flags": 0,
                 "location": "USA",
                 "website": "https://example.com"
             }
@@ -23,7 +25,9 @@
             "avatar": "https://i.pravatar.cc/150?img=1",
             "verified": false,
             "profile": {
-                "bio": "Just a regular user",
+                "bio": "Politics: Democratic supporter",
+                "engagement": "Frequent Commenter",
+                "flags": 0,
                 "location": "USA",
                 "website": "https://example.com"
             }
@@ -40,7 +44,9 @@
             "avatar": "https://i.pravatar.cc/150?img=1",
             "verified": true,
             "profile": {
-                "bio": "Just a regular user",
+                "bio": "Politics: Democratic supporter",
+                "engagement": "Frequent Commenter",
+                "flags": 0,
                 "location": "USA",
                 "website": "https://example.com"
             }
