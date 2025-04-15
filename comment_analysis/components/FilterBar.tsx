@@ -8,17 +8,15 @@ interface FilterBarProps {
 }
 
 export default function FilterBar({ options, setOptions }: FilterBarProps) {
-  const [selectedValue, setSelectedValue] = useState('');
-
   return (
     <View style={styles.container}>
       <RNPickerSelect
-        value={selectedValue}
+        value={options}
         onValueChange={(value) => {
-          setSelectedValue(value);
-          setOptions(value);
+          setOptions(value); // Update the parent state
         }}
         items={[
+          { label: 'All Comments', value: 'all' },
           { label: 'Most Credible (Experts & Verified)', value: 'verified' },
           { label: 'Most Engaged (More replies)', value: 'moreReplies' },
           { label: 'Positive Comments', value: 'positive' },
@@ -36,18 +34,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'flex-end', // Align the dropdown to the right
+    alignItems: 'flex-end',
     padding: 16,
-    width: '40%', // Restrict the container width to 40% of the screen
-    borderWidth: 1, // Add border to the container
+    width: '40%',
+    borderWidth: 1,
     borderColor: '#ccc',
     borderRadius: 8,
-    backgroundColor: '#fff', // Optional: Add a background color to the container
+    backgroundColor: '#fff',
   },
   dropdown: {
     height: 50,
     paddingHorizontal: 8,
     justifyContent: 'center',
-    backgroundColor: 'transparent', // Ensure the dropdown has no background
+    backgroundColor: 'transparent',
   },
 });
