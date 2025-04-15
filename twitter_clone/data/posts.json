@@ -6,13 +6,11 @@
       "handle": "@sandrinetweets",
       "avatar": "https://i.pravatar.cc/150?img=1"
     },
-    "content": "Just started building a Twitter clone in React Native! 🚀 #devlife",
+    "content": "\"Stocks are crashing because investors are in a bad mood, and the reason they are in a bad mood is because they are not getting enough Omega-3 fatty acids,\" he said.",
     "timestamp": "2h",
     "likes": 34,
     "retweets": 5,
-    "media": [
-      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
-    ],
+    "media": [],
     "comments": [
       {
           "name": "Mia W.",
@@ -37,11 +35,13 @@
       "handle": "@techguy",
       "avatar": "https://i.pravatar.cc/150?img=2"
     },
-    "content": "React Native or Flutter? Still can't decide 😅",
+    "content": "Trump administration has put a 10 percent tariff on the Heard and McDonald Islands….\n\nwhich has a population of 0 people and is inhabited only by penguins.",
     "timestamp": "3h",
     "likes": 56,
     "retweets": 10,
-    "media": [],
+    "media": [
+      "https://pbs.twimg.com/media/Gnj8EfXXMAEctCJ?format=jpg&name=medium"
+    ],
     "comments": [
       {
           "name": "Fatima S.",
@@ -55,12 +55,12 @@
   {
     "id": "3",
     "user": {
-      "name": "Lina Code",
-      "handle": "@linacodes",
+      "name": "DonaldJ. Trump",
+      "handle": "@realDonaldTrump",
       "avatar": "https://i.pravatar.cc/150?img=3"
     },
-    "content": "My new dev setup 💻✨",
-    "timestamp": "5h",
+    "content": "Massive combined inoculations to small children is the cause for big increase in autism....",
+    "timestamp": "3:22 PM - 23 Aug 2012",
     "likes": 102,
     "retweets": 14,
     "media": [
@@ -84,28 +84,88 @@
       "handle": "@ken_dev",
       "avatar": "https://i.pravatar.cc/150?img=4"
     },
-    "content": "Dark mode supremacy. 😎",
-    "timestamp": "6h",
+    "content": "\"No drinking\" includes soft drinks btw.  They aren't good for the heart and increases the risk of diabetes.\n\nStick to water. And if you want something sweet, eat fruits.\n\nDo like Ronaldo and push the soda away.",
+    "timestamp": "1:22 PM · Aug 30, 2024",
     "likes": 80,
     "retweets": 13,
     "media": [
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
     ],
-    "comments": []
+    "comments": [
+      {
+        "name": "Chris",
+        "handle": "@chris_dev",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "And while you're at it, remember, the goal is progress, not perfection.",
+        "timestamp": "Aug 30, 2024"
+      },
+      {
+        "name": "Chris",
+        "handle": "@chris_dev",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "And while you're at it, remember, the goal is progress, not perfection.",
+        "timestamp": "Aug 30, 2024"
+      },
+      {
+        "name": "Diokpa",
+        "handle": "@ItIsDiokpa",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "Increase*",
+        "timestamp": "Aug 30, 2024"
+      },
+      {
+        "name": "Christian",
+        "handle": "@maxxaan",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "What of Hollandia yoghurt",
+        "timestamp": "Aug 30, 2024"
+      },
+      {
+        "name": "Zzeua-Sama",
+        "handle": "@Zzeua-Sama",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "Ronaldo is a footballer and it's necessary for his profession \n\nAll man to his tent 🤝😌😌",
+        "timestamp": "Aug 30, 2024"
+      }
+    ]
   },
   {
     "id": "5",
     "user": {
-      "name": "Mira UX",
-      "handle": "@mira_ux",
+      "name": "City Chief",
+      "handle": "@City_Chief",
       "avatar": "https://i.pravatar.cc/150?img=5"
     },
-    "content": "Trying to make this button feel more tappable 🔘",
-    "timestamp": "7h",
+    "content": "🚨| Manchester City 25-26 Third Kit has been leaked. \n\n[via @Footy_Headlines]",
+    "timestamp": "7:42 PM · Apr 6, 2025",
     "likes": 41,
     "retweets": 3,
-    "media": [],
-    "comments": []
+    "media": [
+      "https://pbs.twimg.com/media/Gn3pZbkWUAATJhC?format=jpg&name=medium",
+      "https://pbs.twimg.com/media/Gn3pZbkXkAAaM2u?format=jpg&name=900x900"
+    ],
+    "comments": [
+      {
+        "name": "Zzeua-Sama",
+        "handle": "@Zzeua-Sama",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "Watch the shorts be burgundy or smn",
+        "timestamp": "Apr 6"
+      },
+      {
+        "name": "Zzeua-Sama",
+        "handle": "@Zzeua-Sama",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "Watch the shorts be burgundy or smn",
+        "timestamp": "Apr 6"
+      },{
+        "name": "Zzeua-Sama",
+        "handle": "@Zzeua-Sama",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "Watch the shorts be burgundy or smn",
+        "timestamp": "Apr 6"
+      }
+    ]
   },
   {
     "id": "6",
@@ -114,24 +174,46 @@
       "handle": "@jakeux",
       "avatar": "https://i.pravatar.cc/150?img=6"
     },
-    "content": "Here's my latest mobile UI experiment 🧪",
-    "timestamp": "9h",
+    "content": "🚨 EXCLUSIVE: Luka Modrić, set to become new Minority Owner at Swansea.\n\nModrić will become one of the owners of the Championship club, deal agreed 🦢\n\n❗️ This does 𝐧𝐨𝐭 affect his pro career, as he wants to continue playing for Real Madrid again, as reported last month.",
+    "timestamp": "1:30 PM · Apr 14, 2025",
     "likes": 90,
     "retweets": 22,
     "media": [
-      "https://images.unsplash.com/photo-1557683316-973673baf926"
+      "https://pbs.twimg.com/media/Gofg9IZW8AAdKNW?format=jpg&name=large"
     ],
-    "comments": []
+    "comments": [
+      {
+        "name": "ELLA",
+        "handle": "@Zzeua-Sama",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "Context",
+        "timestamp": "19h"
+      },
+      {
+        "name": "Francis",
+        "handle": "@FrancisChipp",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "Shouldn’t be allowed until he retires, what if Swansea have to play Real Madrid? Can he be trusted?",
+        "timestamp": "Apr 12"
+      },
+      {
+        "name": "Emily",
+        "handle": "@Emily",
+        "avatar": "https://i.pravatar.cc/150?img=14",
+        "text": "How much he paid 🤔🤔🤔",
+        "timestamp": "20h"
+      }
+    ]
   },
   {
     "id": "7",
     "user": {
-      "name": "CodeMonster",
+      "name": "Shehu Gazali Sadiq",
       "handle": "@codemonster",
       "avatar": "https://i.pravatar.cc/150?img=7"
     },
-    "content": "Bug fixed after 4 hours... it was a semicolon. 🫠",
-    "timestamp": "10h",
+    "content": "I laugh when people say I talk about Islam out of ignorance. I was born into Islam. My extended family is a prominent Islamic family. I’ve studied Islam and know Islam. You call me ignorant because you hate the truth. Muslims embrace terrorism and that’s the truth.",
+    "timestamp": "10:59 AM · Apr 12, 2025",
     "likes": 220,
     "retweets": 50,
     "media": [],
@@ -140,27 +222,97 @@
           "name": "Amina",
           "handle": "@amina_uiux",
           "avatar": "https://i.pravatar.cc/150?img=15",
-          "text": "Sounds interesting! I’ll DM you now.",
+          "text": "You were born into Islam family and from extended Islamic family.Here in Nigeria who's study New testament Quoran. Maybe you will have been correct if you had said Shehu Gazali and his extended familys in Nigeria embrace terrorism.",
           "timestamp": "40m"
+        },
+        {
+          "name": "Bossolamilekan",
+          "handle": "@Bossolamilekan1",
+          "avatar": "https://i.pravatar.cc/150?img=14",
+          "text": "I don't know you, but based on your posts, I trust you without doubt.",
+          "timestamp": "Apr 12"
+        },
+        {
+          "name": "Cal",
+          "handle": "@Cal",
+          "avatar": "https://i.pravatar.cc/150?img=14",
+          "text": "Is this the context? Has folks like <b>@BashirAhmaad</b> and <b>@ShehuSani</b> <b>@OfficialDSSNG</b> condemned this statement👇 - that is calling for extrajudicial mob violence?",
+          "timestamp": "Apr 12"
+        },
+        {
+          "name": "Aliyu Mohammad shagari",
+          "handle": "@amdantunishaga",
+          "avatar": "https://i.pravatar.cc/150?img=15",
+          "text": "Doesn't matter.  But don't involve Qur'an whenever you are talking something bad.",
+          "timestamp": "Apr 12"
+        },
+        {
+          "name": "Engr.Abudawud🛰⚡️👷MNSE",
+          "handle": "@a6udawud",
+          "avatar": "https://i.pravatar.cc/150?img=15",
+          "text": "Why is it that muslims are forbidden to read Korean and get understanding for themselves outside what the imams teaches??",
+          "timestamp": "Apr 12"
         }
     ]
   },
   {
     "id": "8",
     "user": {
-      "name": "Ali QA",
-      "handle": "@ali_qa",
+      "name": "Ali Jazeera English",
+      "handle": "@AJEnglish",
       "avatar": "https://i.pravatar.cc/150?img=8"
     },
-    "content": "Testing is just asking 'what if?' again and again 🧠",
+    "content": "A Hindu mob in India ransacked a Muslim man's clothing shop after he posted a video of himself slaughtering a cow on the Islamic holiday of Eid al-Adha. Police eventually managed to force the mob out and close the storefront.",
     "timestamp": "11h",
     "likes": 58,
     "retweets": 11,
     "media": [
-      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
-      "https://images.unsplash.com/photo-1523475496153-3d6ccf9f9c7c"
+      "https://x.com/i/status/1803563411332346272" 
     ],
-    "comments": []
+    "comments": [
+      {
+        "name": "Muktesha 🇮🇳 🪷",
+        "handle": "@MukteshaV",
+        "avatar": "https://i.pravatar.cc/150?img=15",
+        "text": "Shop ransacked, No one was beheaded 👇\n\n28 June 2022 - Kanhaiya Lal Teli, an Hindu tailor, was beheaded by two Muslim men in Udaipur, Rajasthan for sharing a social media post in support of an Indian politician.??",
+        "timestamp": "Jun 20, 2024"
+      },
+      {
+        "name": "Ravi Kumar",
+        "handle": "@ravi_kumar",
+        "avatar": "https://i.pravatar.cc/150?img=16",
+        "text": "This is heartbreaking. Violence is never the answer, no matter the provocation.",
+        "timestamp": "10h"
+      },
+      {
+        "name": "Ayesha Khan",
+        "handle": "@ayesha_k",
+        "avatar": "https://i.pravatar.cc/150?img=17",
+        "text": "Both sides need to learn tolerance. This cycle of hate is destroying communities.",
+        "timestamp": "9h"
+      },
+      {
+        "name": "Vikram Singh",
+        "handle": "@vikram_singh",
+        "avatar": "https://i.pravatar.cc/150?img=18",
+        "text": "The authorities need to take stronger action to prevent such incidents in the future.",
+        "timestamp": "8h"
+      },
+      {
+        "name": "Fatima Ali",
+        "handle": "@fatima_ali",
+        "avatar": "https://i.pravatar.cc/150?img=19",
+        "text": "This is so sad. Why can't we all just coexist peacefully?",
+        "timestamp": "7h"
+      },
+      {
+        "name": "Rajesh Patel",
+        "handle": "@rajesh_patel",
+        "avatar": "https://i.pravatar.cc/150?img=20",
+        "text": "The government needs to address the root causes of such hatred. Education is key.",
+        "timestamp": "6h"
+      }
+    ]
   },
   {
     "id": "9",
