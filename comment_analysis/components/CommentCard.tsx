@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
 import Avatar from './Avatar';
 
+import { Modal } from 'react-native';
+
 import Icon from 'react-native-vector-icons/FontAwesome5'; // Import FontAwesome5 for icons
 
 export default function CommentCard({ comment, isAnalyticView }: { comment: any; isAnalyticView: boolean }) {
@@ -50,7 +52,7 @@ export default function CommentCard({ comment, isAnalyticView }: { comment: any;
       </View>
 
       {/* Absolute Modal for User Profile */}
-      {modalVisible && (
+      {/* {modalVisible && (
         <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
           <View style={styles.modalContent}>
             <View style={styles.flexContainer}>
@@ -88,6 +90,60 @@ export default function CommentCard({ comment, isAnalyticView }: { comment: any;
             </View>
           </View>
         </TouchableWithoutFeedback>
+      )} */}
+
+
+
+      {modalVisible && (
+        <Modal
+          visible={modalVisible}
+          transparent={true} // Makes the background transparent
+          animationType="fade" // Optional: Add animation
+          onRequestClose={() => setModalVisible(false)} // Handle back button press on Android
+        >
+          <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
+            <View style={styles.modalOverlay}>
+              <View style={styles.modalContent}>
+                <View style={styles.flexContainer}>
+                  <Avatar uri={comment.user.avatar} />
+                  <Text style={styles.modalUserName}>{comment.user.name}</Text>
+                  {comment.user.verified && (
+                    <Image
+                      source={require('../assets/images/verified.png')}
+                      style={styles.verifiedBadge}
+                    />
+                  )}
+                </View>
+                <View style={styles.container}>
+                  <Icon name="pin" size={24} color="red" style={styles.modalUserHandle} />
+                  <Text style={styles.modalUserName}>Engagement: {comment.user.profile.engagement}</Text>
+                </View>
+                <View style={styles.container}>
+                  <Icon name="thumbs-up" size={16} color="#007BFF" style={styles.modalUserHandle} />
+                  <Text style={styles.modalUserName}>Topic insights:
+                    <View style={styles.container}>
+                      <Icon name="sack-dollar" size={40} color="#007BFF" />
+                      <Text style={styles.modalUserName}>
+                        {comment.user.profile.bio}
+                      </Text>
+                    </View>
+                  </Text>
+                </View>
+                <View style={styles.container}>
+                  <Icon name="thumbs-up" size={16} color="#007BFF" style={styles.modalUserHandle} />
+                  <Text style={styles.modalUserName}>
+                    Misinformation:
+                    <View style={styles.container}>
+                      <Text style={styles.modalUserName}>
+                        - {comment.user.profile.flags} flags | Fact-Checking contribution
+                      </Text>
+                    </View>
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+        </Modal>
       )}
     </View>
   );
@@ -99,6 +155,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 8,
     zIndex: 1000
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black background
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   card: {
     flexDirection: 'row',
@@ -172,8 +234,8 @@ const styles = StyleSheet.create({
 
   modalContent: {
     position: 'absolute',
-    top: 50,
-    left: '25%',
+    top: '40%',
+    left: '18%',
     width: '80%',
     borderWidth: 1,
     borderColor: '#eee',
@@ -187,8 +249,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
-    elevation: 5,
-    zIndex: 100
+    elevation: 10,
+    zIndex: 1000
   },
   modalUserName: {
     fontWeight: 'bold',
