@@ -18,7 +18,7 @@ export default function PostScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, backgroundColor: '#fff' },
+  container: { flex: 1, padding: 16, backgroundColor: '#fff', height: 'auto' },
   postContent: { fontSize: 18, marginBottom: 16 },
   
 });
