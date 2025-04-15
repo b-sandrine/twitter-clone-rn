@@ -8,7 +8,7 @@ interface FilterBarProps {
 }
 
 export default function FilterBar({ options, setOptions }: FilterBarProps) {
-  const [selectedValue, setSelectedValue] = useState('positive');
+  const [selectedValue, setSelectedValue] = useState('');
 
   return (
     <View style={styles.container}>
