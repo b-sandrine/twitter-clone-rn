@@ -65,26 +65,6 @@ export function TweetCard({ tweet }: TweetCardProps) {
                         <Text>🔁</Text>
                     </TouchableOpacity>
                 </View>
-
-                {/* comment section  */}
-                {Array.isArray(tweet.comments) && tweet.comments.length > 0 && (
-                    <View style={styles.comments}>
-                        {tweet.comments.map((comment, index) => (
-                            <View key={`${tweet.id}-comment-${index}`} style={styles.comment}>
-                                <Avatar uri={comment.avatar} />
-                                <View style={styles.commentContent}>
-                                    <Text style={styles.commentText}>
-                                        <Text style={styles.commentName}>{comment.name}</Text>{' '}
-                                        <Text style={styles.commentHandle}>{comment.handle}</Text>{' '}
-                                        <Text style={styles.commentTimestamp}>· {comment.timestamp}</Text>
-                                    </Text>
-                                    <Text>{comment.text}</Text>
-                                </View>
-                            </View>
-                        ))}
-                    </View>
-                )}
-
             </View>
         </View>
     );

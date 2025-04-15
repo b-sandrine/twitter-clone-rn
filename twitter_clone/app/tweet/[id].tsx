@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from 'expo-router'
 import React from 'react'
 import { View, Text } from 'react-native'
-import { TweetCard, Tweet } from '../../components/TweetCard'
+import { FullTweetCard, Tweet } from '@/components/FullTweetCard'
 
 import tweets from '../../data/posts.json'
 
@@ -10,14 +10,13 @@ function TweetDetailsScreen() {
 
     const tweet = tweets.find((t: Tweet) => t.id === id)
 
-    console.log("Here is the tweet", tweet)
     if (!tweet) {
         return <Text>Tweet not found</Text>
     }
 
   return (
     <View>
-      <TweetCard tweet={tweet} />
+      <FullTweetCard tweet={tweet} />
     </View>
   )
 }
