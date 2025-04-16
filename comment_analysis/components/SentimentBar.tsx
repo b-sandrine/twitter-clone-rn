@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
   barContainer: {
     flexDirection: 'row',
-    height: 40, // Increased height for better visibility
+    height: 30, // Increased height for better visibility
     borderRadius: 20, // Rounded edges
     overflow: 'hidden',
     backgroundColor: '#ddd', // Background color for empty sections
@@ -55,11 +55,11 @@ const styles = StyleSheet.create({
   },
   positiveBar: {
     backgroundColor: 'green',
-    width: '30%'
+    width: '20%'
   },
   neutralBar: {
     backgroundColor: 'yellow',
-    width: '30%'
+    width: '20%'
   },
   negativeBar: {
     backgroundColor: 'red',

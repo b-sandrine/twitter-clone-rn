@@ -1,33 +1,29 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
-import SentimentBar from '../components/SentimentBar';
+import { View, StyleSheet, FlatList } from 'react-native';
 import posts from '../data/posts.json';
 import PostCard from '@/components/PostCard';
 
-const post = posts[0]; // Assume the first post is displayed
-
 export default function PostScreen() {
   return (
-    <ScrollView contentContainerStyle={styles.scrollContainer}>
-      <View style={styles.container}>
-        <PostCard post={post} />
-      </View>
-    </ScrollView>
+    <FlatList
+      data={posts} // Pass the array of posts
+      keyExtractor={(item) => item.id} // Use a unique key for each post
+      renderItem={({ item }) => (
+        <View style={styles.postContainer}>
+          <PostCard post={item} />
+        </View>
+      )}
+      contentContainerStyle={styles.listContainer}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  scrollContainer: {
-    flexGrow: 1, // Ensures the content takes up the full height
+  listContainer: {
     padding: 16,
     backgroundColor: '#fff',
   },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  postContent: {
-    fontSize: 18,
-    marginBottom: 16,
+  postContainer: {
+    marginBottom: 16, // Add spacing between posts
   },
 });

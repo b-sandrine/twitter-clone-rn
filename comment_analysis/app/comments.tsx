@@ -88,8 +88,8 @@ export default function CommentsScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#fff' },
   flexContainer: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 },
-  switchContainer: { flexDirection: 'row', marginBottom: 16, width: '40%' , marginRight: 10, backgroundColor: 'grey', borderRadius: 8, padding: 4 },
-  toggleButton: { flex: 1, paddingVertical: 10, alignItems: 'center', borderRadius: 16 },
+  switchContainer: { flexDirection: 'row', marginBottom: 16, width: '40%' , marginRight: 10, backgroundColor: '#e9ebf0', borderRadius: 8, padding: 4 , marginTop: 12},
+  toggleButton: { flex: 1, paddingVertical: 10, alignItems: 'center', borderRadius: 8 },
   activeToggleButton: { backgroundColor: '#007BFF' },
   toggleText: { fontSize: 14, color: '#000' },
   activeToggleText: { color: '#fff', fontWeight: 'bold' },

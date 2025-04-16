@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
         marginBottom: 16,
         borderRadius: 8,
         overflow: 'hidden',
-        height: 'auto',
-        maxHeight: 800,
+        borderBottomColor: 'grey',
+        borderBottomWidth: 1,
     },
     scrollContainer: {
         padding: 10,
