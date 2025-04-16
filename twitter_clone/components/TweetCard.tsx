@@ -71,7 +71,7 @@ export function TweetCard({ tweet }: TweetCardProps) {
 }
 
 const styles = StyleSheet.create({
-    card: { flexDirection: 'row', padding: 12 },
+    card: { flexDirection: 'row', padding: 12 , borderBottomWidth: 1, borderBottomColor: 'grey'},
     content: { marginLeft: 10, flex: 1 },
     name: { fontWeight: 'bold' },
     handle: { color: 'gray' },
